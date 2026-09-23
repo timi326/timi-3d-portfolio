@@ -1,0 +1,83 @@
+.scene-editor { --ed-bg:#17212c; --ed-panel:#202c39; --ed-line:#3b4958; --ed-text:#e4edf3; --ed-muted:#a7b8c7; --ed-accent:#8cd3df; position:fixed; inset:0; display:grid; grid-template-columns:220px minmax(0,1fr) 292px; grid-template-rows:76px minmax(0,1fr) 36px; background:var(--ed-bg); color:var(--ed-text); font:14px 'Segoe UI','Microsoft YaHei',sans-serif; }
+.scene-editor button,.scene-editor input { font:inherit; }
+.scene-editor button { cursor:pointer; border:1px solid var(--ed-line); background:#293747; border-radius:5px; padding:9px 12px; color:var(--ed-text); }
+.scene-editor button:hover:not(:disabled) { background:#3b5062; border-color:#9bbac7; }
+.scene-editor button:disabled { opacity:.4; cursor:default; }
+.scene-editor button:focus-visible,.scene-editor input:focus-visible,.scene-editor a:focus-visible { outline:2px solid var(--ed-accent); outline-offset:2px; }
+.editor-header { grid-column:1/-1; display:flex; align-items:center; gap:20px; padding:12px 22px; border-bottom:1px solid var(--ed-line); background:#1b2733; }
+.editor-title { display:flex; gap:12px; align-items:center; flex-shrink:0; }
+.editor-logo { display:grid; place-items:center; width:39px; height:39px; border:1px solid #8195a5; font:italic 25px Georgia,serif; }
+.editor-title h1 { font-size:18px; font-weight:600; }
+.editor-title p { font:10px 'Consolas',monospace; letter-spacing:.12em; color:var(--ed-muted); margin-top:4px; }
+.editor-save-state { font-size:13px; color:var(--ed-muted); white-space:nowrap; }
+.editor-save-state.is-dirty { color:#efc489; }
+.editor-header nav { margin-left:auto; display:flex; align-items:center; gap:8px; }
+.editor-header a { color:var(--ed-muted); text-decoration:none; margin-right:12px; white-space:nowrap; }
+.editor-header .editor-primary { background:var(--ed-accent); color:#132631; border-color:var(--ed-accent); font-weight:600; }
+.editor-assets,.editor-inspector { background:var(--ed-panel); min-height:0; display:flex; flex-direction:column; overflow:auto; }
+.editor-assets { border-right:1px solid var(--ed-line); }
+.editor-inspector { border-left:1px solid var(--ed-line); }
+.editor-panel-heading { display:flex; justify-content:space-between; align-items:center; padding:21px 18px 15px; }
+.editor-panel-heading h2 { font-size:14px; font-weight:600; }
+.editor-panel-heading>span { color:var(--ed-muted); font:12px Consolas,monospace; }
+.scene-editor .editor-search { width:calc(100% - 28px); margin:0 14px 12px; padding:10px; border:1px solid var(--ed-line); color:var(--ed-text); border-radius:4px; background:#18232f; }
+.editor-search::placeholder { color:#92a5b6; }
+.editor-asset-list { padding:0 8px 15px; flex:1; overflow:auto; }
+.editor-asset-list button { display:flex; width:100%; align-items:center; gap:9px; text-align:left; border:1px solid transparent; background:transparent; border-radius:4px; padding:10px; margin-bottom:3px; }
+.editor-asset-list button.selected { background:#314b5c; border-color:#729daf; color:#dcfaff; }
+.asset-symbol { color:#88b2c0; font-size:19px; line-height:1; }
+.editor-static-note { padding:14px 18px; font-size:12px; line-height:1.8; color:var(--ed-muted); border-top:1px solid var(--ed-line); }
+.editor-stage { position:relative; min-width:0; min-height:0; overflow:hidden; }
+.editor-canvas { position:absolute; inset:0; }
+.editor-canvas canvas { display:block; width:100%; height:100%; touch-action:none; }
+.editor-toolbar { position:absolute; z-index:2; top:14px; left:14px; right:14px; display:flex; justify-content:space-between; gap:8px; pointer-events:none; }
+.editor-toolbar>div { display:flex; gap:3px; padding:4px; border:1px solid #4a5c6a; background:#1c2a36ef; border-radius:6px; pointer-events:auto; }
+.editor-toolbar button { padding:7px 9px; border-color:transparent; background:transparent; white-space:nowrap; }
+.editor-toolbar button.selected { background:#c3dfe5; color:#173340; }
+.editor-toolbar kbd { margin-left:7px; font-size:11px; opacity:.6; }
+.editor-view-tools { position:absolute; left:16px; top:80px; display:flex; gap:5px; }
+.editor-view-tools button { background:#223340e8; padding:6px 9px; font-size:13px; }
+.editor-view-options { position:absolute; bottom:48px; left:16px; display:flex; flex-wrap:wrap; gap:12px; background:#1b2936e6; padding:9px 12px; border-radius:4px; font-size:13px; }
+.editor-view-options label { display:flex; align-items:center; gap:7px; }
+.editor-view-options input { accent-color:var(--ed-accent); }
+.editor-navigation-hint { position:absolute; bottom:17px; left:18px; color:#c3d0dd; font-size:12px; text-shadow:0 1px 3px #000; pointer-events:none; }
+.editor-selection { padding:13px 18px 23px; border-bottom:1px solid var(--ed-line); }
+.editor-selection>span { color:var(--ed-muted); font-size:12px; }
+.editor-selection h3 { font-size:19px; margin:7px 0 9px; }
+.editor-selection code { font-size:12px; color:#89b9c9; }
+.editor-transform { margin:21px 17px 0; border:none; min-width:0; }
+.editor-transform legend { display:flex; justify-content:space-between; width:100%; font-weight:600; margin-bottom:11px; }
+.editor-transform legend span { color:var(--ed-muted); font-size:12px; font-weight:400; }
+.editor-transform>div { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
+.editor-transform label { display:flex; flex-direction:column; gap:6px; color:#d99292; font:12px Consolas,monospace; }
+.editor-transform label.axis-y { color:#a3c98f; }
+.editor-transform label.axis-z { color:#8fb4e4; }
+.editor-transform input { width:100%; min-width:0; background:#172430; border:1px solid #4a5c6d; border-radius:4px; color:#edf4f7; padding:9px 5px; font:13px Consolas,monospace; }
+.editor-dimensions { margin:22px 18px; color:var(--ed-muted); font-size:12px; }
+.editor-dimensions p { margin-top:9px; font:14px Consolas,monospace; color:#d4e1eb; }
+.scene-editor .editor-reset { margin:0 18px 24px; background:transparent; }
+.editor-save-note { margin-top:auto; padding:20px 18px; border-top:1px solid var(--ed-line); }
+.editor-save-note strong { font-size:13px; font-weight:500; }
+.editor-save-note p { color:var(--ed-muted); font-size:12px; line-height:1.85; margin:8px 0 13px; }
+.editor-save-note button { width:100%; font-size:13px; }
+.editor-empty-selection { padding:32px 23px; text-align:center; }
+.editor-empty-selection>span { font-size:48px; color:#7493a7; }
+.editor-empty-selection h3 { font-size:17px; font-weight:500; margin:16px 0 10px; }
+.editor-empty-selection p,.editor-empty { color:var(--ed-muted); font-size:14px; line-height:1.9; }
+.editor-empty { padding:14px; }
+.editor-status { grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:7px 18px; border-top:1px solid var(--ed-line); color:#b1c5d4; font-size:12px; background:#192530; }
+.editor-status>span:last-child { white-space:nowrap; }
+.editor-loading { position:absolute; inset:0; display:flex; flex-direction:column; gap:20px; align-items:center; justify-content:center; background:#17212ce8; z-index:4; }
+.editor-export-dialog { position:fixed; inset:0; margin:auto; width:min(760px,94vw); max-height:88dvh; height:680px; border:1px solid #567385; border-radius:8px; padding:0; background:#202c39; color:#e4edf3; }
+.editor-export-dialog[open] { display:flex; flex-direction:column; }
+.editor-export-dialog::backdrop { background:#08111bcc; }
+.editor-export-dialog header { display:flex; align-items:center; justify-content:space-between; padding:20px; gap:12px; }
+.editor-export-dialog h2 { font-size:19px; }
+.editor-export-dialog p { color:#a7b8c7; font-size:13px; margin-top:6px; }
+.editor-export-dialog textarea { display:block; resize:none; width:calc(100% - 40px); flex:1; min-height:120px; margin:0 20px; padding:15px; color:#bde5ed; background:#12202b; border:1px solid #486070; border-radius:4px; font:13px/1.6 Consolas,monospace; }
+.editor-export-dialog footer { display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:10px; padding:18px 20px; }
+.editor-export-dialog footer span { margin-right:auto; font-size:12px; color:#b5c6d3; }
+.editor-export-dialog footer a { padding:10px 14px; background:#8cd3df; color:#132631; border-radius:4px; text-decoration:none; }
+@media(max-width:1150px) { .scene-editor { grid-template-columns:180px minmax(0,1fr) 254px; } .editor-header { padding:10px 14px; gap:12px; } .editor-save-state { display:none; } .editor-toolbar kbd { display:none; } .editor-toolbar { left:8px; right:8px; } .editor-toolbar button { padding:7px; } }
+@media(max-width:820px) { .scene-editor { grid-template-columns:160px minmax(0,1fr); grid-template-rows:100px minmax(260px,1fr) 230px 40px; } .editor-header { flex-wrap:wrap; align-content:center; gap:8px; } .editor-title h1 { font-size:16px; } .editor-title p,.editor-logo { display:none; } .editor-header nav { flex-wrap:wrap; gap:5px; margin-left:auto; } .editor-header button { padding:8px; font-size:12px; } .editor-header a { font-size:12px; margin-right:3px; } .editor-assets { grid-column:1; grid-row:2; } .editor-stage { grid-column:2; grid-row:2; } .editor-inspector { grid-column:1/-1; grid-row:3; display:block; border-top:1px solid var(--ed-line); } .editor-inspector .editor-panel-heading { display:none; } .editor-selection { padding:12px 17px; } .editor-selection h3 { display:inline; font-size:16px; margin:0 14px; } .editor-transform { display:inline-block; width:calc(33.333% - 24px); margin:15px 10px; vertical-align:top; } .editor-transform legend { display:block; } .editor-transform legend span { display:block; margin-top:4px; } .editor-dimensions { display:inline-block; margin:7px 18px; } .editor-save-note { padding:12px 18px; } .editor-empty-selection { padding:20px; } .editor-empty-selection>span { display:none; } .editor-status { grid-row:4; } .editor-status>span:last-child { display:none; } .editor-view-options { bottom:42px; left:8px; gap:6px; font-size:11px; } .editor-navigation-hint { font-size:10px; left:8px; max-width:90%; } .editor-toolbar { flex-wrap:wrap; } .editor-view-tools { top:106px; left:8px; } .editor-toolbar button { font-size:12px; } }
+@media(max-width:440px) { .scene-editor { grid-template-columns:116px minmax(0,1fr); } .editor-assets .editor-panel-heading { padding:12px 9px; } .editor-asset-list { padding:0 3px; } .editor-asset-list button { padding:9px 5px; font-size:12px; gap:3px; } .asset-symbol { display:none; } .editor-static-note { padding:10px 8px; font-size:10px; } .scene-editor .editor-search { margin:0 6px 10px; width:calc(100% - 12px); font-size:12px; } .editor-transform { width:calc(33.333% - 14px); margin:12px 5px; } .editor-transform>div { gap:3px; } .editor-transform input { font-size:11px; padding:7px 2px; } }

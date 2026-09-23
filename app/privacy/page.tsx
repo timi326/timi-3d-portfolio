@@ -1,0 +1,3 @@
+import Link from 'next/link';
+
+export default function Privacy(){return <main style={{minHeight:'100dvh',background:'#18211d',color:'#e6e6df',padding:'64px 24px',fontFamily:'sans-serif'}}><article style={{maxWidth:680,margin:'auto',lineHeight:1.9}}><Link href="/" style={{color:'#d4bf95'}}>← 返回工作室</Link><h1 style={{fontSize:32,marginTop:36}}>数字分身聊天 · 隐私说明</h1><p>更新于 2026 年 9 月 14 日</p><h2>保存哪些内容</h2><p>你发送给数字分身的文字、数字分身的回答、发送时间和回答状态会保存到本站服务器，最多保留 30 天，随后自动清理。每段聊天使用随机编号区分，不要求填写姓名或联系方式。</p><h2>谁能查看</h2><p>网站作者 Timi 可通过需要登录的私人管理台查看记录，用于了解访客反馈、改进数字分身的回答。聊天记录不会公开展示。</p><h2>模型服务</h2><p>为生成回答，相关对话内容会发送给 DeepSeek 模型服务。请避免在聊天中填写密码、证件号码或其他敏感资料。AI 回答可能有误。</p><h2>结束与新对话</h2><p>关闭对话或点击“新对话”会清空当前界面的聊天上下文，不会立即删除服务器上已保存的记录。服务器记录会在 30 天后自动清理，作者也可以提前删除。</p></article></main>;}

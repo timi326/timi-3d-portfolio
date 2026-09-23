@@ -1,0 +1,102 @@
+.timi-chat-page { min-height: 100dvh; padding: 32px 20px; display: grid; place-items: center; background: #283744; }
+.timi-chat-dialog { width: min(740px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); padding: 0; border: 0; border-radius: 22px; background: #f4f0e9; color: #33434c; }
+.timi-chat-dialog::backdrop { background: #18232da8; backdrop-filter: blur(8px); }
+.timi-chat { --chat-ink: #33434c; --chat-muted: #687275; --chat-line: #d9d7d0; width: 100%; max-width: 740px; height: min(760px, calc(100dvh - 64px)); display: flex; flex-direction: column; background: #f4f0e9; color: var(--chat-ink); border-radius: 22px; overflow: hidden; font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; }
+.timi-chat button, .timi-chat a { -webkit-tap-highlight-color: transparent; }
+.timi-chat button { cursor: pointer; font: inherit; }
+.timi-chat button:disabled { cursor: default; opacity: .5; }
+.timi-chat :is(button,a,textarea):focus-visible { outline: 2px solid #a45338; outline-offset: 4px; }
+.timi-chat-header { display: flex; align-items: center; gap: 16px; padding: 24px 28px; border-bottom: 1px solid var(--chat-line); }
+.timi-chat-monogram { width: 50px; height: 58px; display: grid; place-items: center; border-radius: 26px 26px 4px 4px; background: #b6694c; color: #fff7ed; font: italic 34px Georgia, serif; flex-shrink: 0; }
+.timi-chat-eyebrow { margin: 0 0 6px; color: var(--chat-muted); font-size: 12px; letter-spacing: .12em; }
+.timi-chat h2 { font-size: 20px; font-weight: 600; margin: 0; }
+.timi-chat-status { margin: 8px 0 0; font-size: 13px; color: var(--chat-muted); }
+.timi-chat-close { margin-left: auto; border: 0; background: transparent; color: var(--chat-ink); font-size: 30px !important; width: 44px; height: 44px; }
+.timi-chat-back { margin-left: auto; color: var(--chat-ink); font-size: 14px; white-space: nowrap; }
+.timi-chat-transcript { flex: 1; min-height: 0; overflow-y: auto; padding: 28px; overscroll-behavior: contain; }
+.timi-chat-welcome { max-width: 490px; margin: 18px auto; }
+.timi-chat-window { color: #b6694c; font-size: 32px; }
+.timi-chat h3 { font-size: 28px; font-weight: 500; margin: 14px 0; letter-spacing: -.04em; }
+.timi-chat-welcome > p { font-size: 16px; line-height: 1.9; color: var(--chat-muted); }
+.timi-chat-prompts { display: grid; gap: 10px; margin-top: 24px; }
+.timi-chat-prompts button { text-align: left; display: flex; justify-content: space-between; gap: 12px; padding: 14px 16px; border: 1px solid var(--chat-line); background: transparent; border-radius: 10px; color: var(--chat-ink); font-size: 14px; }
+.timi-chat-notice { border-left: 2px solid #b6694c; padding: 8px 0 8px 16px; margin-top: 24px; }
+.timi-chat-message { margin: 0 0 24px; max-width: 92%; }
+.timi-chat-message > span { font-size: 12px; color: var(--chat-muted); }
+.timi-chat-message p { margin: 8px 0 0; font-size: 16px; line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; }
+.timi-chat-message.user { margin-left: auto; padding: 14px 18px; background: #e5e8e5; border-radius: 14px 14px 2px 14px; }
+.timi-chat-wait { font-size: 14px; color: var(--chat-muted); }
+.timi-chat-footer { padding: 16px 28px 20px; border-top: 1px solid var(--chat-line); }
+.timi-chat-footer form { display: flex; align-items: flex-end; gap: 12px; }
+.timi-chat textarea { resize: none; flex: 1; min-width: 0; border: 1px solid var(--chat-line); background: #fffdf8; border-radius: 12px; padding: 12px 14px; color: var(--chat-ink); font: 16px/1.6 inherit; font-family: inherit; font-size: 16px; }
+.timi-chat-footer form button { border: 0; padding: 14px 18px; border-radius: 12px; background: #33434c; color: #fffdf8; }
+.timi-chat-footnote { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; color: var(--chat-muted); font-size: 12px; }
+.timi-chat-footnote button { color: var(--chat-ink); background: transparent; border: 0; font-size: 14px; }
+.timi-chat-error { margin: 0 0 12px; font-size: 14px; color: #9a3d2a; }
+.timi-read-reply { border: 1px solid #d9d7d0; border-radius: 8px; background: transparent; padding: 7px 12px; margin-bottom: 10px; color: #33434c; font-size: 14px !important; }
+.timi-chat-dialog.in-room { position: fixed; inset: 0; margin: 0; width: 100vw; height: 100dvh; max-height: none; background: transparent; border-radius: 0; padding: 24px; pointer-events: none; }
+.timi-chat-dialog.in-room[open] { display: flex; justify-content: flex-end; align-items: center; }
+.timi-chat-dialog.in-room::backdrop { background: transparent; backdrop-filter: none; }
+.timi-chat-dialog.in-room .timi-chat { width: min(430px, 42vw); height: calc(100dvh - 48px); max-height: 820px; pointer-events: auto; box-shadow: 0 18px 70px #17202838; }
+.timi-chat-dialog.in-room .timi-chat-header { padding: 18px; gap: 10px; }
+.timi-chat-dialog.in-room .timi-chat h2 { font-size: 19px; }
+.timi-chat-dialog.in-room .timi-chat-monogram { display: none; }
+.timi-chat-dialog.in-room .timi-chat-transcript { padding: 22px; }
+.timi-chat-dialog.in-room .timi-chat-footer { padding: 14px 18px; }
+.avatar-presence { position: absolute; bottom: 28px; left: 28px; z-index: 20; color: #fff7ea; background: #283744ad; border: 1px solid #ffffff33; padding: 10px 16px; border-radius: 24px; font-size: 14px; }
+.is-avatar-chat :is(.scene-header,.walk-hint,.mini-map,.reticle,.asset-credit) { visibility: hidden; }
+@media (max-width: 699px) {
+  .timi-chat-dialog.in-room { padding: 0 10px 10px; }
+  .timi-chat-dialog.in-room[open] { align-items: flex-end; }
+  .timi-chat-dialog.in-room .timi-chat { width: 100%; height: 57dvh; border-radius: 18px; }
+  .timi-chat-dialog.in-room .timi-chat-header { padding: 10px 16px; }
+  .timi-chat-dialog.in-room .timi-chat-status { margin-top: 4px; }
+  .timi-chat-dialog.in-room .timi-chat-eyebrow { display: none; }
+  .timi-chat-dialog.in-room .timi-chat-transcript { padding: 12px 18px; }
+  .timi-chat-dialog.in-room .timi-chat-welcome { margin: 0; }
+  .timi-chat-dialog.in-room .timi-chat-window { display: none; }
+  .timi-chat-dialog.in-room .timi-chat h3 { font-size: 20px; margin: 4px 0; }
+  .avatar-presence { top: 12px; left: 12px; bottom: auto; }
+}
+@media (max-width: 600px) { .timi-chat-page { padding: 12px; } .timi-chat { height: calc(100dvh - 24px); border-radius: 16px; } .timi-chat-dialog { width: calc(100vw - 24px); max-height: calc(100dvh - 24px); } .timi-chat-header { gap: 10px; padding: 18px 16px; flex-wrap: wrap; } .timi-chat h2 { font-size: 17px; } .timi-chat-monogram { width: 38px; height: 48px; } .timi-chat-transcript { padding: 20px; } .timi-chat-footer { padding: 14px 16px; } .timi-chat-footnote { align-items: flex-start; } }
+/* In-room conversation: keep the character visible above the dialogue. */
+.timi-chat-dialog.in-room { padding: 24px 5vw; }
+.timi-chat-dialog.in-room[open] { align-items: flex-end; justify-content: center; }
+.timi-chat-dialog.in-room .timi-chat { --chat-ink:#f7efdf; --chat-muted:#c6bba9; --chat-line:#e8d5ad35; width:100%; max-width:1120px; height:auto; max-height:52dvh; border-radius:6px; background:linear-gradient(115deg,#18252df5,#24343aeb); border:1px solid #d8bb8166; box-shadow:0 14px 60px #0005; backdrop-filter:blur(16px); }
+.timi-chat-dialog.in-room .timi-chat-header { padding:14px 24px 10px; gap:12px; flex-wrap:nowrap; }
+.timi-chat-dialog.in-room .timi-chat-eyebrow { display:none; }
+.timi-chat-dialog.in-room .timi-chat h2 { color:#eed4a0; font-size:20px; letter-spacing:.06em; }
+.timi-chat-dialog.in-room .timi-chat-status { margin:4px 0 0; font-size:11px; }
+.timi-chat-dialog.in-room .timi-chat-close { width:auto; height:auto; font-size:12px!important; white-space:nowrap; }
+.game-dialogue-body { padding:12px 24px; min-height:92px; overflow-y:auto; }
+.game-last-question { margin:0 0 8px; color:var(--chat-muted); font-size:12px; }
+.game-dialogue-line { white-space:pre-wrap; overflow-wrap:anywhere; font-size:17px; line-height:1.8; }
+.game-reveal { display:block; margin:6px 0 0 auto; border:0; background:none; color:#eed4a0; font-size:12px!important; }
+.game-dialogue-choices { display:flex; gap:8px; padding:0 24px 12px; flex-wrap:wrap; }
+.game-dialogue-choices button { border:1px solid var(--chat-line); border-radius:3px; background:#ffffff08; color:var(--chat-ink); padding:8px 12px; font-size:13px; text-align:left; }
+.game-dialogue-choices button:hover:not(:disabled) { background:#d7b57422; border-color:#d7b574; }
+.game-dialogue-choices span { color:#e2c087; margin-right:9px; }
+.timi-chat-dialog.in-room .timi-chat-footer { padding:10px 24px 12px; }
+.timi-chat-dialog.in-room textarea { background:#101c2380; border-radius:4px; color:#f7efdf; padding:8px 12px; }
+.timi-chat-dialog.in-room .timi-chat-footer form button { border-radius:4px; background:#dfc28c; color:#1b2930; padding:10px 18px; }
+.timi-chat-dialog.in-room .timi-chat-footnote { margin-top:7px; font-size:10px; }
+.timi-chat-dialog.in-room .timi-chat-footnote button { font-size:12px; }
+.timi-chat-dialog.in-room .timi-chat-transcript { max-height:20dvh; padding:12px 24px; }
+.timi-chat-dialog.in-room .timi-chat-message.user { background:#ffffff10; }
+.timi-chat-dialog.in-room .timi-read-reply { color:#eed4a0; border-color:var(--chat-line); margin-bottom:7px; padding:4px 10px; font-size:12px!important; }
+.timi-chat-dialog.in-room .timi-chat-error { color:#ffb8a4; }
+.timi-chat-dialog.in-room :is(button,textarea):focus-visible { outline-color:#eed4a0; }
+.is-avatar-chat .avatar-presence { display:none; }
+.game-sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+@media(max-width:700px) {
+ .timi-chat-dialog.in-room { padding:8px; }
+ .timi-chat-dialog.in-room .timi-chat { max-height:58dvh; border-radius:6px; }
+ .timi-chat-dialog.in-room .timi-chat-header { padding:10px 14px; }
+ .timi-chat-dialog.in-room .timi-chat h2 { font-size:16px; }
+ .game-dialogue-body { padding:8px 14px; min-height:70px; }
+ .game-dialogue-line { font-size:14px; line-height:1.65; }
+ .game-dialogue-choices { padding:0 14px 8px; gap:5px; }
+ .game-dialogue-choices button { font-size:11px; padding:6px 8px; }
+ .timi-chat-dialog.in-room .timi-chat-footer { padding:8px 14px; }
+ .timi-chat-dialog.in-room .timi-chat-footnote > span { max-width:48%; }
+}

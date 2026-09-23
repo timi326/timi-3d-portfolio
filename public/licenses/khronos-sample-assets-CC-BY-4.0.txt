@@ -1,0 +1,22 @@
+Khronos glTF Sample Assets used in this project
+
+1. Sheen Wood Leather Sofa
+   Improvements: Eric Chadwick
+   Copyright 2024, Darmstadt Graphics Group GmbH
+   License: Creative Commons Attribution 4.0 International
+   Source: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/SheenWoodLeatherSofa
+
+   Original asset: Fran Calvente
+   Copyright 2021, Public domain
+   License: Creative Commons Zero v1.0 Universal
+
+2. Iridescence Lamp
+   Creator: Eric Chadwick
+   Copyright 2022, Wayfair, LLC
+   License: Creative Commons Attribution 4.0 International
+   Source: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/IridescenceLamp
+
+Creative Commons Attribution 4.0 International:
+https://creativecommons.org/licenses/by/4.0/
+
+The assets have been positioned and illuminated for this interactive modern apartment scene.

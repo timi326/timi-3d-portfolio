@@ -1,0 +1,75 @@
+.rewind-game { position: fixed; inset: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: #233844; color: #f4eddf; overflow: hidden; font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; }
+.rewind-game::backdrop { background: #13222b; }
+.rewind-viewport { position: absolute; inset: 0; }
+.rewind-viewport canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.rewind-game button, .rewind-game a { border: 1px solid #d4dfdc36; background: #172b37db; color: #e9ebe3; border-radius: 7px; padding: 10px 14px; text-decoration: none; font-size: 12px; cursor: pointer; touch-action: none; }
+.rewind-game button:hover, .rewind-game a:hover { background: #304956; }
+.rewind-game button:focus-visible, .rewind-game a:focus-visible { outline: 2px solid #f7d3a7; outline-offset: 4px; }
+.rewind-game kbd { font: 10px 'Consolas', monospace; opacity: .7; margin-left: 5px; }
+.rewind-top { position: absolute; z-index: 3; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 24px 34px; background: linear-gradient(#152c3799, transparent); pointer-events: none; }
+.rewind-top nav { display: flex; gap: 8px; pointer-events: auto; }
+.rewind-brand { font: 26px Georgia, serif; }
+.rewind-brand small { font: 9px 'Consolas', monospace; letter-spacing: .15em; margin-left: 12px; color: #c3d4d5; }
+.rewind-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, #132c38f2, #132c38b8 45%, #132c3810); display: flex; align-items: center; padding: 8vw; }
+.rewind-intro { max-width: 500px; }
+.rewind-eyebrow { color: #b7d6d2; letter-spacing: .13em; font-size: 11px; margin-bottom: 25px; }
+.rewind-intro h1 { font-weight: 500; font-size: clamp(46px, 6.7vw, 88px); letter-spacing: -.055em; line-height: 1.1; }
+.rewind-intro h1 > span { color: #d9bb8f; display: block; }
+.rewind-intro h1 > i { display: block; color: #b9cbcd; font: italic clamp(21px, 3vw, 35px) Georgia, serif; letter-spacing: -.03em; margin-top: 15px; }
+.rewind-lead { color: #bacad0; font-size: 14px; line-height: 2; margin: 26px 0; }
+.rewind-instructions { display: flex; flex-wrap: wrap; max-width: 350px; gap: 13px 18px; margin-bottom: 28px; color: #adbdc5; font-size: 11px; }
+.rewind-instructions kbd { margin: 0 5px 0 0; color: #e1d6c2; }
+.rewind-game .rewind-start { background: #dfc39b; color: #263b46; border-color: transparent; padding: 15px 24px; display: flex; align-items: center; justify-content: space-between; gap: 50px; min-width: 220px; font-size: 14px; font-weight: 600; }
+.rewind-game .rewind-start:hover { background: #f1d7b4; }
+.rewind-footnote { color: #92a8b1; font-size: 10px; margin-top: 16px; }
+.rewind-cover-stamp { margin-left: auto; color: #d9e8e130; font: 170px Georgia, serif; transform: rotate(-12deg); text-align: center; }
+.rewind-cover-stamp span { display: block; color: #e0e7ddab; font: 12px/2 'Microsoft YaHei', sans-serif; }
+.rewind-chapter { position: absolute; top: 103px; left: 34px; pointer-events: none; text-shadow: 0 1px 5px #102332; }
+.rewind-chapter > span { font-size: 10px; color: #dee5dc; letter-spacing: .13em; }
+.rewind-chapter h1 { font-weight: 500; font-size: 23px; margin-top: 8px; }
+.rewind-chapter ol { display: flex; gap: 9px; list-style: none; margin-top: 18px; }
+.rewind-chapter li { border: 1px solid #d5e7e43a; color: #c4d2d2; border-radius: 5px; padding: 7px; background: #21384499; font: 10px 'Consolas', monospace; }
+.rewind-chapter li span { display: none; margin-left: 6px; font-family: 'Microsoft YaHei', sans-serif; }
+.rewind-chapter li.current { background: #d2bb95; color: #283b44; text-shadow: none; }
+.rewind-chapter li.current span { display: inline; }
+.rewind-chapter li.done { color: #9ae1d0; }
+.rewind-crosshair { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: .65; font: 18px monospace; pointer-events: none; }
+.rewind-objective { position: absolute; bottom: 132px; left: 50%; transform: translateX(-50%); background: #172d3aeb; border: 1px solid #d6e7dd28; padding: 16px 20px; border-radius: 10px; width: min(540px, 66vw); pointer-events: none; }
+.rewind-objective p { font-size: 13px; line-height: 1.7; }
+.rewind-objective small { font-size: 10px; color: #a8c5cd; display: block; margin-top: 9px; }
+.rewind-meter { height: 2px; background: #ffffff19; margin-top: 12px; overflow: hidden; }
+.rewind-meter > span { display: block; height: 100%; background: #8bd5cf; transition: width .1s linear; }
+.rewind-controls { position: absolute; bottom: max(20px, env(safe-area-inset-bottom)); left: 34px; right: 34px; display: flex; align-items: flex-end; gap: 14px; }
+.rewind-move { width: 132px; text-align: center; }
+.rewind-move > div { display: flex; gap: 4px; margin-top: 4px; }
+.rewind-game .rewind-move button { width: 40px; height: 36px; padding: 0; font-family: 'Consolas', monospace; }
+.rewind-control-note { color: #ccd8db; font-size: 10px; line-height: 1.8; padding-bottom: 6px; text-shadow: 0 1px 4px #142b37; }
+.rewind-actions { display: flex; gap: 8px; margin-left: auto; }
+.rewind-game .rewind-primary { background: #2a666c; border-color: #74b6bb70; }
+.rewind-game .rewind-primary:active { background: #428b8c; }
+.rewind-game .rewind-recording { background: #885543; }
+.rewind-assist { position: absolute; right: 34px; top: 104px; max-width: 260px; text-align: right; }
+.rewind-assist p { padding: 15px; background: #172d3aee; border-radius: 8px; text-align: left; color: #cfdbdc; margin-top: 8px; font-size: 12px; line-height: 1.8; }
+.rewind-modal { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; background: #102733d9; }
+.rewind-modal section { width: min(430px, 100%); }
+.rewind-modal h2 { font-size: clamp(30px, 5vw, 48px); font-weight: 500; line-height: 1.4; margin-bottom: 18px; }
+.rewind-modal p:not(.rewind-eyebrow) { color: #b8cdd1; font-size: 13px; line-height: 1.9; }
+.rewind-modal .rewind-start { margin: 26px 0 12px; }
+.rewind-result { display: flex; gap: 50px; border-top: 1px solid #ffffff24; padding-top: 24px; margin-top: 25px; font: 24px Georgia, serif; }
+.rewind-result small { display: block; font: 11px 'Microsoft YaHei', sans-serif; color: #99b7c0; margin-top: 8px; }
+@media (max-width: 640px) {
+ .rewind-top { padding: 18px 16px; } .rewind-brand small, .rewind-cover-stamp, .rewind-control-note { display: none; }
+ .rewind-top button, .rewind-top a { font-size: 10px; padding: 9px; }
+ .rewind-overlay { padding: 90px 28px 30px; background: #132c38d9; }
+ .rewind-intro h1 { font-size: 52px; } .rewind-intro h1 > span { display: inline; }
+ .rewind-chapter { top: 86px; left: 16px; } .rewind-chapter h1 { font-size: 20px; }
+ .rewind-chapter li.current span { display: none; }
+ .rewind-assist { right: 16px; top: 87px; max-width: 210px; }
+ .rewind-objective { bottom: 126px; width: calc(100% - 32px); padding: 12px 15px; }
+ .rewind-objective p { font-size: 12px; }
+ .rewind-controls { left: 16px; right: 16px; gap: 5px; }
+ .rewind-game .rewind-actions button { padding: 12px 10px; font-size: 11px; } .rewind-actions { gap: 5px; }
+ .rewind-move { width: 114px; } .rewind-game .rewind-move button { width: 35px; }
+}
+@media (max-height: 540px) { .rewind-intro h1 { font-size: 42px; } .rewind-intro h1 > span { display: inline; } .rewind-lead { margin: 12px 0; } .rewind-eyebrow { margin-bottom: 10px; } .rewind-intro h1 > i { display: none; } .rewind-instructions { margin-bottom: 15px; } .rewind-overlay { padding-top: 70px; } .rewind-objective { bottom: 100px; } .rewind-chapter ol { display: none; } }
+@media (prefers-reduced-motion: reduce) { .rewind-meter > span { transition: none; } }

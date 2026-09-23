@@ -1,0 +1,12 @@
+Modern desk accessories
+======================
+
+Xiaomi LED Desk Lamp 1S
+Creator: redizajnd (bojansolar)
+Creator page: https://sketchfab.com/bojansolar
+Source: https://sketchfab.com/3d-models/xiaomi-led-desk-lamp-1s-c085f7b68800434c96ab028a6b7e2e67
+License: Creative Commons Attribution 4.0 International
+License URL: https://creativecommons.org/licenses/by/4.0/
+Changes: selective mesh simplification, unused UV removal, resource deduplication;
+scaled and rotated for this scene, with a warm task light added at the diffuser.
+Original geometry dimensions and source attribution retained.

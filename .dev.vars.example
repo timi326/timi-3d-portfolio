@@ -1,0 +1,4 @@
+# Copy this file to .dev.vars, then fill in both values locally.
+# DeepSeek official API. Fill in the key locally; keep the model below.
+DEEPSEEK_API_KEY=""
+TIMI_MODEL="deepseek-flash"

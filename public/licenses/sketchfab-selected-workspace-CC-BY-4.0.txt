@@ -1,0 +1,17 @@
+Selected workspace assets
+=========================
+
+1. "Programmer Desk Setup – Stylized 3D Room"
+   Creator: Saad Hesham
+   Source: https://sketchfab.com/3d-models/programmer-desk-setup-stylized-3d-room-ede58cf414534e47b57bf788dc075b17
+   License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+   License text: https://creativecommons.org/licenses/by/4.0/
+   Changes: removed animations, the original computer equipment, room shell,
+   wall-mounted UI, and unused resources; resized and relit for this portfolio scene.
+
+2. "gaming setup v2 (low-poly)"
+   Creator: LagzDesign
+   Source: https://sketchfab.com/3d-models/gaming-setup-v2-low-poly-c4aafe2ed67841b9b52e80e8e469dbb8
+   License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+   License text: https://creativecommons.org/licenses/by/4.0/
+   Changes: removed unused resources; resized and relit for this portfolio scene.
