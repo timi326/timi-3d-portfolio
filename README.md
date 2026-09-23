@@ -2,7 +2,7 @@
 
 这是 [timi.store](https://timi.store/) 当前线上版本的开源源码。你可以走进黄昏公寓，自由移动，与数字分身聊天，打开桌面项目、观星台和时间倒流小游戏。
 
-![Timi Studio 的三维房间](public/og.png)
+![Timi Studio 线上三维房间实景](docs/website-preview.png)
 
 ## 现在包含什么
 
